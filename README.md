@@ -46,27 +46,6 @@
 ---
 
 ⭐ From [Kaptan-Singh01](https://github.com/Kaptan-Singh01)
-<h1 align="center">🐍 Watch the Snake Eat to Reveal the Name 🐍</h1>
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/Platane/snk/output/github-contribution-grid-snake.svg" alt="Snake animation" />
-</p>
-
-<h2 align="center">✨ Kaptan Singh ✨</h2>
-
-<p align="center">
-  <b>AI & Data Science Student at IIT Jodhpur</b><br>
-  Passionate about LLMs, Python, and Intelligent Systems
-</p>
-
----
-
-<p align="center">
-  <img src="https://skillicons.dev/icons?i=python,pytorch,git,github,vscode" />
-</p>
-
----
-
-⭐ *The Snake of Knowledge crawls across my GitHub and writes my name.*
 
 
