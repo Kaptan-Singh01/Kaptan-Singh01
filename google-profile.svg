@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="520" viewBox="0 0 900 520" role="img" aria-label="Google style profile animation for Kaptan Singh">
+  <style>
+    .bg { fill:#ffffff; }
+    .logo { font-family: Arial, sans-serif; font-size:64px; font-weight:700; }
+    .searchbox { fill:#fff; stroke:#e0e0e0; stroke-width:2; rx:30; }
+    .search-text { font-family: monospace, monospace; font-size:24px; fill:#202124; dominant-baseline:middle; }
+    .cursor { fill:#202124; }
+    .button { fill:#1a73e8; rx:18; }
+    .button-text { font-family: Arial, sans-serif; font-size:14px; fill:#fff; font-weight:700; text-anchor:middle; dominant-baseline:middle; }
+    .url { font-family: Arial, sans-serif; font-size:13px; fill:#006621; }
+    .title { font-family: Arial, sans-serif; font-size:18px; fill:#1a0dab; font-weight:700; }
+    .desc { font-family: Arial, sans-serif; font-size:14px; fill:#4d5156; }
+  </style>
+
+  <!-- background -->
+  <rect width="100%" height="100%" class="bg"/>
+
+  <!-- Google logo -->
+  <g transform="translate(120,70)">
+    <text class="logo">
+      <tspan fill="#4285F4">G</tspan>
+      <tspan fill="#EA4335">o</tspan>
+      <tspan fill="#FBBC05">o</tspan>
+      <tspan fill="#4285F4">g</tspan>
+      <tspan fill="#34A853">l</tspan>
+      <tspan fill="#EA4335">e</tspan>
+    </text>
+  </g>
+
+  <!-- search area -->
+  <g transform="translate(60,150)">
+    <!-- search box -->
+    <rect x="0" y="0" width="720" height="64" class="searchbox"/>
+
+    <!-- mask that reveals text from left to right (typing) -->
+    <defs>
+      <mask id="revealMask">
+        <rect x="0" y="0" width="720" height="64" fill="black"/>
+        <!-- white rect grows to reveal text -->
+        <rect x="24" y="12" width="0" height="40" fill="white">
+          <animate attributeName="width" from="0" to="620" begin="0.6s" dur="1.9s" fill="freeze"/>
+        </rect>
+      </mask>
+    </defs>
+
+    <!-- typed text (revealed by mask) -->
+    <text x="32" y="38" class="search-text" mask="url(#revealMask)">Kaptan Singh</text>
+
+    <!-- blinking cursor: moves with typing (x animates) -->
+    <rect x="32" y="12" width="3.5" height="40" class="cursor" opacity="1">
+      <animate attributeName="x" from="32" to="652" begin="0.6s" dur="1.9s" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0;1;0" dur="0.9s" begin="0.6s" repeatCount="indefinite"/>
+    </rect>
+
+    <!-- search button (blink) -->
+    <g transform="translate(660,12)">
+      <rect width="88" height="40" class="button">
+        <animate attributeName="opacity" values="1;0.75;1" dur="1.4s" begin="0.6s" repeatCount="indefinite"/>
+      </rect>
+      <text x="44" y="24" class="button-text">Search</text>
+    </g>
+  </g>
+
+  <!-- tip -->
+  <text x="450" y="240" font-family="Arial, sans-serif" font-size="13px" fill="#5f6368" text-anchor="middle">Tip: (search auto-animates; results appear shortly after)</text>
+
+  <!-- results group (appear after typing completes) -->
+  <g transform="translate(120,280)">
+    <!-- result 1 -->
+    <g id="r1" opacity="0" transform="translate(0,0)">
+      <animate attributeName="opacity" from="0" to="1" begin="3.1s" dur="0.6s" fill="freeze"/>
+      <text x="0" y="0" class="url">github.com/Kaptan-Singh01</text>
+      <text x="0" y="24" class="title">Kaptan Singh — AI &amp; Data Science Student, IIT Jodhpur</text>
+      <text x="0" y="48" class="desc">Interested in Large Language Models (LLMs) and learning practical AI systems.</text>
+    </g>
+
+    <!-- result 2 -->
+    <g id="r2" opacity="0" transform="translate(0,80)">
+      <animate attributeName="opacity" from="0" to="1" begin="3.6s" dur="0.6s" fill="freeze"/>
+      <text x="0" y="0" class="url">Profile Summary</text>
+      <text x="0" y="24" class="title">Collaborative Learner — Open-Source Contributor</text>
+      <text x="0" y="48" class="desc">Enjoys teamwork and contributing to shared AI projects and practical implementations.</text>
+    </g>
+
+    <!-- result 3 -->
+    <g id="r3" opacity="0" transform="translate(0,160)">
+      <animate attributeName="opacity" from="0" to="1" begin="4.1s" dur="0.6s" fill="freeze"/>
+      <text x="0" y="0" class="url">Skills</text>
+      <text x="0" y="24" class="title">Python • PyTorch • Machine Learning • Data Analysis</text>
+      <text x="0" y="48" class="desc">Focused on practical coding and model development during early studies.</text>
+    </g>
+  </g>
+</svg>
