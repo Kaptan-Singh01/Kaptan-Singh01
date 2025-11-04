@@ -1,0 +1,108 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kaptan Singh - Google Style Profile</title>
+  <style>
+    body {
+      background: white;
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    h1 {
+      font-size: 90px;
+      letter-spacing: -2px;
+      margin-bottom: 40px;
+    }
+    .blue { color: #4285f4; }
+    .red { color: #ea4335; }
+    .yellow { color: #fbbc05; }
+    .green { color: #34a853; }
+
+    .search-box {
+      display: flex;
+      align-items: center;
+      border: 1px solid #dcdcdc;
+      border-radius: 24px;
+      padding: 10px 20px;
+      width: 400px;
+      max-width: 90%;
+    }
+    input {
+      border: none;
+      outline: none;
+      font-size: 18px;
+      flex: 1;
+    }
+    button {
+      border: none;
+      background: none;
+      cursor: pointer;
+      font-size: 16px;
+      color: #4285f4;
+      font-weight: bold;
+      animation: blink 1.2s infinite;
+    }
+    @keyframes blink {
+      0%, 50%, 100% { opacity: 1; }
+      25%, 75% { opacity: 0.5; }
+    }
+    .results {
+      margin-top: 40px;
+      display: none;
+      text-align: center;
+      animation: fadeIn 1s ease forwards;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <h1>
+    <span class="blue">G</span><span class="red">o</span><span class="yellow">o</span>
+    <span class="blue">g</span><span class="green">l</span><span class="red">e</span>
+  </h1>
+
+  <div class="search-box">
+    <input type="text" id="searchInput" placeholder="" readonly />
+    <button id="searchBtn">Search</button>
+  </div>
+
+  <div class="results" id="results">
+    <h2>Kaptan Singh</h2>
+    <p>🎓 AI & Data Science Student @ IIT Jodhpur</p>
+    <p>💡 Interested in LLMs and Robotics</p>
+    <p>⚙️ Skills: Python, PyTorch, Machine Learning Basics</p>
+  </div>
+
+  <script>
+    const input = document.getElementById("searchInput");
+    const results = document.getElementById("results");
+    const btn = document.getElementById("searchBtn");
+    const text = "Kaptan Singh";
+    let i = 0;
+
+    function type() {
+      if (i < text.length) {
+        input.placeholder += text.charAt(i);
+        i++;
+        setTimeout(type, 150);
+      }
+    }
+    window.onload = type;
+
+    btn.addEventListener("click", () => {
+      results.style.display = "block";
+    });
+  </script>
+</body>
+</html>
